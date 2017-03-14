@@ -44,15 +44,15 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     // The three next states are for each of the three tabs.
     // The state names start with "tab.", indicating that they are children of the "tab" state.
-    .state('tab.newIssue', {
-      // The URL (here "/newIssue") is used only internally with Ionic; you never see it displayed anywhere.
+    .state('tab.profile', {
+      // The URL (here "/profile") is used only internally with Ionic; you never see it displayed anywhere.
       // In an Angular website, it would be the URL you need to go to with your browser to enter this state.
-      url: '/newIssue',
+      url: '/profile',
       views: {
-        // The "tab-newIssue" view corresponds to the <ion-nav-view name="tab-newIssue"> directive used in the tabs.html template.
-        'tab-newIssue': {
+        // The "tab-profile" view corresponds to the <ion-nav-view name="tab-profile"> directive used in the tabs.html template.
+        'tab-profile': {
           // This defines the template that will be inserted into the directive.
-          templateUrl: 'templates/newIssue.html'
+          templateUrl: 'templates/profile.html'
         }
       }
     })
@@ -98,7 +98,7 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
   // Define the default state (i.e. the first screen displayed when the app opens).
   $urlRouterProvider.otherwise(function($injector) {
-    $injector.get('$state').go('tab.newIssue'); // Go to the new issue tab by default.
+    $injector.get('$state').go('tab.issueMap'); // Go to the issue map tab by default.
   });
 });
 
@@ -118,4 +118,3 @@ angular.module('citizen-engagement').run(function(AuthService, $rootScope, $stat
     }
   });
 });
-

@@ -60,7 +60,7 @@ angular.module('citizen-engagement').controller('LoginCtrl', function(apiUrl, Au
       });
 
       // Go to the issue creation tab.
-      $state.go('tab.newIssue');
+      $state.go('tab.profile');
 
     }).catch(function() {
 
@@ -97,4 +97,3 @@ angular.module('citizen-engagement').factory('AuthInterceptor', function(AuthSer
     }
   };
 });
-
