@@ -4,7 +4,9 @@
     <!-- A banner. Choose an image and save it as www/img/banner.jpg -->
     <!--<img src="img/banner.jpg" width="100%" alt="Citizen Engagement" />-->
     <ion-content>
-      <p>Add Issue sa mère</p>
+      <div ng-controller='IssueController as ctrl'>
+        <p>{{ctrl.hello}}</p>
+      </div>
     </ion-content>
   </ion-content>
 </ion-view>

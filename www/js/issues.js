@@ -1,4 +1,4 @@
-angular.module('citizen-engagement').factory('IssueService', function($scope) {
+angular.module('citizen-engagement').factory('IssueService', function() {
   var service = {};
 
   service.helloWorld = function(){
@@ -10,7 +10,7 @@ angular.module('citizen-engagement').factory('IssueService', function($scope) {
 
 angular.module('citizen-engagement').controller('IssueController', function(IssueService) {
   var ctrl = this;
-  
+
   IssueService.helloWorld().then(function(hello) {
     ctrl.hello = hello;
   });
