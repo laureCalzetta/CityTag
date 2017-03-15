@@ -17,11 +17,13 @@
 
       <!-- Ionic uses lists to group related input elements. -->
       <div class="list">
-        <label class="item item-input">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Username</span>
           <!-- Note the required="required" attribute used for validation. -->
           <input type="text" placeholder="Username" ng-model="loginCtrl.user.name" required />
         </label>
-        <label class="item item-input">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
           <input type="password" placeholder="Password" ng-model="loginCtrl.user.password" required />
         </label>
       </div>

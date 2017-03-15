@@ -1,8 +1,28 @@
+<!-- User details:
+{
+  "name": "jdoe",
+  "password": "changeme",
+  "firstname": "John",
+  "lastname": "Doe",
+  "phone": "(460) 614-2120",
+  "roles": [
+    "citizen"
+  ]
+} -->
 <ion-view view-title="profile">
   <ion-nav-buttons side="secondary">
     <button type="button" ng-controller="LogoutCtrl as logoutCtrl" ng-click="logoutCtrl.logOut()" class="button">Log Out</button>
   </ion-nav-buttons>
   <ion-content>
     <p>PROFILE</p>
+
+    <h1>Username</h1>
+    <p>jdoe</p>
+    <h1>Firstname</h1>
+    <p>John</p>
+    <h1>Lastname</h1>
+    <p>Doe</p>
+    <h1>Phone</h1>
+    <p>(460) 614-2120</p>
   </ion-content>
 </ion-view>

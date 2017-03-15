@@ -99,9 +99,16 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('newUser', {
       url: '/newUser',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
+      // controller: 'NewUserCtrl',
+      // controllerAs: "newUserCtrl",
       templateUrl: 'templates/newUser.html'
+    })
+
+    .state('filters', {
+      url: '/filters',
+      // controller: 'FiltresCtrl',
+      // controllerAs: "filtresCtrl",
+      templateUrl: 'templates/filters.html'
     });
 
 
