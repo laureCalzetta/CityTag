@@ -1,8 +1,10 @@
-angular.module('citizen-engagement').factory('IssueService', function() {
+angular.module('citizen-engagement').factory('IssueService', function($http) {
   var service = {};
 
-  service.helloWorld = function(){
-    return "Hello World";
+  service.getIssues = function(){
+    $http.get(apiUrl).then(function(res) {
+      console.log(res);
+    });
   }
 
   return service;
@@ -10,8 +12,6 @@ angular.module('citizen-engagement').factory('IssueService', function() {
 
 angular.module('citizen-engagement').controller('IssueController', function(IssueService) {
   var ctrl = this;
-
-  IssueService.helloWorld().then(function(hello) {
-    ctrl.hello = hello;
-  });
+  ctrl.issues = IssueService.getIssues();
+  
 });

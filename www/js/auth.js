@@ -62,11 +62,11 @@ angular.module('citizen-engagement').controller('LoginCtrl', function(apiUrl, Au
       // Go to the issue creation tab.
       $state.go('tab.issueMap');
 
-    }).catch(function() {
+    }).catch(function(res) {
 
       // If an error occurs, hide the loading message and show an error message.
       $ionicLoading.hide();
-      loginCtrl.error = 'Could not log in.';
+      loginCtrl.error = 'Could not log in';
     });
   };
 });
