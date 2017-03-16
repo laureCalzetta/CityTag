@@ -111,19 +111,6 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       templateUrl: 'templates/filters.html'
     });
 
-    .state('addIssue', {
-      url: '/addIssue',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
-      templateUrl: 'templates/addIssue.html'
-    })
-
-    .state('editIssue', {
-      url: '/editIssue',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
-      templateUrl: 'templates/editIssue.html'
-    });
 
 
 
