@@ -1,1 +1,47 @@
-/* Empty. Add your own CSS if you like */
+body {
+    font-family:'Open Sans', sans-serif;
+    font-size:14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Open Sans', sans-serif;
+}
+
+h1 {
+    line-height:50px;
+    font-weight:900;
+    font-size:2em;
+    text-align:center;
+    color: #E91C1C;
+}
+
+.text-center {
+    text-align:center;
+}
+
+h2 {
+    line-height:1em;
+    color:#E91C1C;
+}
+h3 {
+    line-height:30px;
+    padding-bottom:20px;
+}
+h4 {
+    padding-top: 25px;
+    line-height: 40px;
+    padding-bottom: 0px;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.iconeTop {
+  color: #E91C1C;
+  font-size: 2em;
+  padding: 0.25em 0.5em;
+}
+
+.iconeTop:hover {
+  color: blue;
+
+}
