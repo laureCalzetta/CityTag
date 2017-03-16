@@ -1,14 +1,17 @@
-<ion-view view-title="Issue Map">
- 	<ion-nav-buttons side="primary">
-	    <a type="button" class="iconeTop icon ion-android-options"></a>
-  	</ion-nav-buttons>
+<ion-view>
  	<ion-nav-buttons side="left">
-	    <a type="button" class="iconeTop icon ion-android-search"></a>
+	    <button type="button" class="button-icon iconeTop icon ion-android-search" ng-click="showFilterBar()"></button>
   	</ion-nav-buttons>
 
-  </ion-nav-buttons>
+ 	<ion-nav-buttons side="right">
+	    <button type="button" class="button-icon iconeTop icon ion-android-options" ng-click="showFilter()"></button>
+  	</ion-nav-buttons>
 
-  <ion-content>
-    <p>Hello! This is the Issue Map.</p>
-  </ion-content>
+
+	<ion-content>
+		<p>Hello! This is the Issue Map.</p>
+	</ion-content>
+
+
+
 </ion-view>

@@ -23,6 +23,12 @@ angular.module('citizen-engagement', ['ionic', 'angular-storage'])
   });
 })
 
+
+angular.module('citizen-engagement').config(function($ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position("bottom");
+});
+
+
 angular.module('citizen-engagement').config(function($httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
 });

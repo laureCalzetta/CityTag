@@ -9,21 +9,35 @@
     "citizen"
   ]
 } -->
-<ion-view view-title="profile">
-  <ion-nav-buttons side="secondary">
-    <a type="button" ng-controller="LogoutCtrl as logoutCtrl" ng-click="logoutCtrl.logOut()" class="iconeTop icon ion-log-out"></a>
+<ion-view>
+
+  <ion-nav-buttons side="right">
+    <button type="button" ng-controller="LogoutCtrl as logoutCtrl" ng-click="logoutCtrl.logOut()" class="button-icon iconeTop icon ion-log-out"></button>
   </ion-nav-buttons>
+
   <ion-content>
 
-    <h1>Username</h1>
-    <p>jdoe</p>
-    <h1>Firstname</h1>
-    <p>John</p>
-    <h1>Lastname</h1>
-    <p>Doe</p>
-    <h1>Phone</h1>
-    <p>(460) 614-2120</p>
+    <div class="list">
+      <a class="item" href="#">
+        <h2>Username</h1>
+        <p>jdoe</p>
+      </a>
 
+      <a class="item" href="#">
+        <h2>Firstname</h1>
+        <p>John</p>
+      </a>
+
+      <a class="item" href="#">
+        <h2>Lastname</h1>
+        <p>Doe</p>
+      </a>
+
+      <a class="item" href="#">
+        <h2>Phone</h1>
+        <p>(460) 614-2120</p>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>
