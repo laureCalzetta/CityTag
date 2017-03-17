@@ -28,23 +28,13 @@ angular.module('citizen-engagement', [
   });
 })
 
-
-<<<<<<< HEAD
-
 angular.module('citizen-engagement').controller('MyCtrl', function($log) {
   var myCtrl = this;
 });
 
-
-
-
-=======
 angular.module('citizen-engagement').config(function($ionicConfigProvider) {
   $ionicConfigProvider.tabs.position("bottom");
 });
-
-
->>>>>>> 2ebf97d000ad5735a677042b34f0c9aba980480e
 angular.module('citizen-engagement').config(function($httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
 });
