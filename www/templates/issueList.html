@@ -11,7 +11,6 @@
 
 
   <ion-content>
-
 	<div class="list list-inset">
 	  <label class="item item-input">
 	    <i class="icon ion-search placeholder-icon"></i>
@@ -20,10 +19,10 @@
 	</div>
     <div class="list">
 	    <a class="item item-thumbnail-left" ui-sref="issueDetails({ issueId: issue.id })" ng-repeat="issue in issueCtrl.issues" href="#">
-			<img src="{{issue.imageUrl}}">
+			<img ng-src="{{issue.imageUrl}}">
       <h2 class="positive">{{issue.description}}</h2>
       <p>{{issue.state}}</p>
-			<p>{{dateFormat(issue.createdAt, "mmmm dS, yyyy, h:MM:ss TT")}}</p>
+			<p>{{issue.createdAt | date:'yyyy-MM-dd HH:mm:ss'}}</p>
 	    </a>
 	</div>
 
