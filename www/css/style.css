@@ -3,6 +3,10 @@ body {
     font-size: 1em;
 }
 
+ion-content {
+  margin-bottom: 10%;
+}
+
 .button.back-button {
   color: white;
 }
@@ -25,7 +29,9 @@ body {
 }
 
 .send {
-  font-size: 1.5em;
+  margin-left: 3%;
+  font-size: 1.75em;
+  color: red;
 }
 
 h1 {
@@ -108,4 +114,10 @@ p {
   padding: 0em 1em;
   border-bottom: 0.5px solid #E91C1C;
   border-right: 1px solid #E91C1C;
+}
+
+.iconAdd {
+  font-size: 2em;
+  color: red;
+  margin-left: 90%;
 }
