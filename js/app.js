@@ -61,7 +61,7 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       url: '/issueMap',
       views: {
         'tab-issueMap': {
-          templateUrl: 'templates/issueMap.html'
+          templateUrl: 'templates/issueMap2.html'
         }
       }
     })
@@ -136,3 +136,9 @@ angular.module('citizen-engagement').run(function(AuthService, $rootScope, $stat
     }
   });
 });
+
+
+
+
+
+

@@ -1,17 +1,45 @@
-<ion-view view-title="Filters">
-  <ion-content>
-	<div class="item range">
-		<i class="icon ion-volume-low"></i>
-		<input type="range" name="volume">
-		<i class="icon ion-volume-high"></i>
-	</div>
+<ion-view>
 
-	<div class="list">
-		<div class="item range range-positive">
-			<i class="icon ion-ios-sunny-outline"></i>
-			<input type="range" name="volume" min="0" max="100" value="33">
-			<i class="icon ion-ios-sunny"></i>
-		</div>
-	</div>
-  </ion-content>
+	<ion-nav-buttons side="left">
+		<button type="button" class="button-icon iconeTop icon ion-chevron-left"></button>
+	</ion-nav-buttons>
+
+	<ion-nav-title>
+		<span class="navTitle">Filters</span>
+	</ion-nav-title>
+  	<ion-content>
+
+		<div class="list">
+			<div class="item range range-positive">
+				<i class="icon ion-ios-sunny-outline"></i>
+				<input type="range" name="volume" min="0" max="100" value="33">
+				<i class="icon ion-ios-sunny"></i>
+			</div>
+	      	<a class="item">
+	        	<h2>Created before</h2>
+				<ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+	      	</a>
+
+	      	<a class="item">
+		        <h2>Creator</h1>
+		        <p>id user</p>
+	      	</a>
+
+	      	<a class="item">
+		        <h2>State</h2>
+	        	<ion-list>
+					<ion-checkbox class="choice" ng-model="filter.new">New</ion-checkbox>
+					<ion-checkbox class="choice" ng-model="filter.inProgress">In Progress</ion-checkbox>
+					<ion-checkbox class="choice" ng-model="filter.resolved">Resolved</ion-checkbox>
+				</ion-list>
+	      	</a>
+
+	     	<a class="item">
+	        	<h2>Tag</h2>
+	        	<p>tag 1 tag 2</p>
+	      	</a>
+	    </div>
+
+
+  	</ion-content>
 </ion-view>

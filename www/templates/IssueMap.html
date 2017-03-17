@@ -1,13 +1,14 @@
-<ion-view view-title="Issue Map">
- 	<ion-nav-buttons side="primary">
-	    <a type="button" class="iconeTop icon ion-android-options"></a>
-  	</ion-nav-buttons>
+<ion-view>
  	<ion-nav-buttons side="left">
-	    <a type="button" class="iconeTop icon ion-android-search"></a>
+	    <button type="button" class="button-icon iconeTop icon ion-android-search" ng-click="showFilterBar()"></button>
   	</ion-nav-buttons>
 
-  </ion-nav-buttons>
+ 	<ion-nav-buttons side="right">
+	    <button type="button" class="button-icon iconeTop icon ion-android-options" ng-click="showFilter()"></button>
+  	</ion-nav-buttons>
 
+
+<<<<<<< HEAD
   <ion-content scroll='false' data-tap-disabled='true'>
     <leaflet width='100%' height='100%'
              defaults='mapCtrl.defaults'
@@ -16,3 +17,12 @@
     </leaflet>
   </ion-content>
 </ion-view>
+=======
+	<ion-content>
+		<p>Hello! This is the Issue Map.</p>
+	</ion-content>
+
+
+
+</ion-view>
+>>>>>>> 2ebf97d000ad5735a677042b34f0c9aba980480e
