@@ -1,8 +1,6 @@
 <ion-view>
 
-	<ion-nav-buttons side="left">
-		<button ui-sref='tab.issueMap' type="button" class="button-icon iconeTop icon ion-chevron-left"></button>
-	</ion-nav-buttons>
+
 
 	<ion-nav-title>
 		<span class="navTitle ion-android-options"> Filters</span>
@@ -24,16 +22,16 @@
 		        	<ion-checkbox class="choice" ng-model="new.checked" ng-change="newChange()">
 			          New
 			        </ion-checkbox>
-			        <pre ng-bind="new | json"></pre>
 			        <ion-checkbox class="choice" ng-model="inProgress.checked" ng-change="pinProgressChange()">
 			          In Progress
 			        </ion-checkbox>
-			        <pre ng-bind="inProgress | json"></pre>
 			        <ion-checkbox class="choice" ng-model="resolved.checked" ng-change="resolvedChange()">
 			          Resolved
+      		        </ion-checkbox>
+			        <ion-checkbox class="choice" ng-model="rejected.checked" ng-change="rejectedChange()">
+			          Rejected
+      		        </ion-checkbox>
 			      </div>
-		        </ion-checkbox>
-		        <pre ng-bind="resolved | json"></pre>
 	      	</div>
 	    </div>
 
