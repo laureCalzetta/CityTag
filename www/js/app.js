@@ -3,7 +3,12 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'citizen-engagement' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('citizen-engagement', ['ionic', 'angular-storage'])
+angular.module('citizen-engagement', [
+  'ionic',
+  'angular-storage',
+  'geolocation',
+  'leaflet-directive'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,12 +28,13 @@ angular.module('citizen-engagement', ['ionic', 'angular-storage'])
   });
 })
 
+angular.module('citizen-engagement').controller('MyCtrl', function($log) {
+  var myCtrl = this;
+});
 
 angular.module('citizen-engagement').config(function($ionicConfigProvider) {
   $ionicConfigProvider.tabs.position("bottom");
 });
-
-
 angular.module('citizen-engagement').config(function($httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
 });
@@ -67,6 +73,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       url: '/issueMap',
       views: {
         'tab-issueMap': {
+          controller: 'MapCtrl',
+          controllerAs: 'mapCtrl',
           templateUrl: 'templates/issueMap.html'
         }
       }
@@ -76,6 +84,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       url: '/issueList',
       views: {
         'tab-issueList': {
+          controller: 'IssueCtrl',
+          controllerAs: 'issueCtrl',
           templateUrl: 'templates/issueList.html'
         }
       }
