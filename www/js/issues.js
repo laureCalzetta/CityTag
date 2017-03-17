@@ -49,6 +49,4 @@ angular.module('citizen-engagement').controller('IssueCtrl', function(IssueServi
     console.log(issues);
     issueCtrl.issues = issues;
   })
-
-
 });

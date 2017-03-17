@@ -128,11 +128,15 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       templateUrl: 'templates/newUser.html'
     })
 
-    .state('filters', {
+    .state('tab.filters', {
       url: '/filters',
-      // controller: 'FiltresCtrl',
-      // controllerAs: "filtresCtrl",
-      templateUrl: 'templates/filters.html'
+      views: {
+        'tab-issueMap': {
+          // controller: 'MapCtrl',
+          // controllerAs: 'mapCtrl',
+          templateUrl: 'templates/filters.html'
+        }
+      }
     })
 
     .state('issueDetails', {
