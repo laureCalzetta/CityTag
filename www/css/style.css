@@ -12,19 +12,18 @@ body {
   color: white;
 }
 
+
 h1 {
     font-weight:900;
     font-size:1.5em;
     color: #E91C1C;
 }
 
-.text-center {
-    text-align:center;
-}
 
 h2 {
     line-height:1em;
     color:#E91C1C;
+    padding-bottom: 0.5em;
 }
 h3 {
     line-height:30px;
@@ -49,11 +48,42 @@ h4 {
 
 }
 
+
+.btn {
+  background: #E91C1C;
+  background-image: -webkit-linear-gradient(top, #E91C1C, #bf1919);
+  background-image: -moz-linear-gradient(top, #E91C1C, #bf1919);
+  background-image: -ms-linear-gradient(top, #E91C1C, #bf1919);
+  background-image: -o-linear-gradient(top, #E91C1C, #bf1919);
+  background-image: linear-gradient(to bottom, #E91C1C, #bf1919);
+  margin: 0em 40%;
+  text-align: center;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+
+.btn:hover {
+  background: #e88d1e;
+  background-image: -webkit-linear-gradient(top, #e88d1e, #cc791a);
+  background-image: -moz-linear-gradient(top, #e88d1e, #cc791a);
+  background-image: -ms-linear-gradient(top, #e88d1e, #cc791a);
+  background-image: -o-linear-gradient(top, #e88d1e, #cc791a);
+  background-image: linear-gradient(to bottom, #e88d1e, #cc791a);
+  text-decoration: none;
+}
+
 .search {
   visibility: hidden;
 }
 
 .choice {
+  border: none;
   font-size: 0.75em;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  background: #E91C1C;
   border: none;
 }

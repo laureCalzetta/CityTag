@@ -5,40 +5,39 @@
 	</ion-nav-buttons>
 
 	<ion-nav-title>
-		<span class="navTitle">Filters</span>
+		<span class="navTitle ion-android-options"> Filters</span>
 	</ion-nav-title>
   	<ion-content>
 
 		<div class="list">
-			<div class="item range range-positive">
-				<i class="icon ion-ios-sunny-outline"></i>
-				<input type="range" name="volume" min="0" max="100" value="33">
-				<i class="icon ion-ios-sunny"></i>
-			</div>
-	      	<a class="item">
-	        	<h2>Created before</h2>
-				<ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
-	      	</a>
-
-	      	<a class="item">
-		        <h2>Creator</h1>
-		        <p>id user</p>
-	      	</a>
-
-	      	<a class="item">
+	        <label style="margin-right: 1em; border: none" class="item item-input item-floating-label">
+	        	<h2>Tags</h2>
+	          <input style="padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="tag1, tag2, …"/>
+	        </label>
+	        <label style="margin-right: 1em; border: none" class="item item-input item-floating-label">
+	        	<h2>Creator</h2>
+	          <input style="padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="number" placeholder="id user"/>
+	        </label>
+	      	<div class="item">
 		        <h2>State</h2>
-	        	<ion-list>
-					<ion-checkbox class="choice" ng-model="filter.new">New</ion-checkbox>
-					<ion-checkbox class="choice" ng-model="filter.inProgress">In Progress</ion-checkbox>
-					<ion-checkbox class="choice" ng-model="filter.resolved">Resolved</ion-checkbox>
-				</ion-list>
-	      	</a>
-
-	     	<a class="item">
-	        	<h2>Tag</h2>
-	        	<p>tag 1 tag 2</p>
-	      	</a>
+		        <ion-checkbox class="choice" ng-model="new.checked" ng-change="newChange()">
+		          New
+		        </ion-checkbox>
+		        <pre ng-bind="new | json"></pre>
+		        <ion-checkbox class="choice" ng-model="inProgress.checked" ng-change="pinProgressChange()">
+		          In Progress
+		        </ion-checkbox>
+		        <pre ng-bind="inProgress | json"></pre>
+		        <ion-checkbox class="choice" ng-model="resolved.checked" ng-change="resolvedChange()">
+		          Resolved
+		        </ion-checkbox>
+		        <pre ng-bind="resolved | json"></pre>
+	      	</div>
 	    </div>
+
+      	<button class="btn" ng-click="" ng-disabled="">Filter</button>
+
+
 
 
   	</ion-content>
