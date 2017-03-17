@@ -7,25 +7,12 @@
 	    <input type="text" placeholder="Search">
 	  </label>
 	</div>
-
     <div class="list">
-	    <a class="item item-thumbnail-left" href="#">
-			<img src="https://rouelibre3.files.wordpress.com/2013/02/dsc_8496b.jpg">
-			<h2>Tag 1</h2>
-			<p>Description</p>
-			<p>date</p>
-	    </a>
-	    <a class="item item-thumbnail-left" href="#">
-			<img src="http://a137.idata.over-blog.com/473x500/3/09/62/80/00-2013/tag-ville/c-jacques-masse---11.jpg">
-			<h2>Tag 2</h2>
-			<p>Description</p>
-			<p>date</p>
-	    </a>
-	    <a class="item item-thumbnail-left" href="#">
-			<img src="http://static.panoramio.com/photos/large/81716158.jpg">
-			<h2>Tag 2</h2>
-			<p>Description</p>
-			<p>date</p>
+	    <a class="item item-thumbnail-left" ui-sref="issueDetails({ issueId: issue.id })" ng-repeat="issue in issueCtrl.issues" href="#">
+			<img src="{{issue.imageUrl}}">
+      <h2 class="positive">{{issue.description}}</h2>
+      <p>{{issue.state}}</p>
+			<p>{{dateFormat(issue.createdAt, "mmmm dS, yyyy, h:MM:ss TT")}}</p>
 	    </a>
 	</div>
 
