@@ -1,8 +1,31 @@
-<ion-view view-title="Edit Issue">
-    <!-- A banner. Choose an image and save it as www/img/banner.jpg -->
-    <!--<img src="img/banner.jpg" width="100%" alt="Citizen Engagement" />-->
-    <ion-content class="padding">
-      <p>Edit Issue sa mère</p>
-    </ion-content>
-  </ion-content>
+<ion-view>
+
+	<ion-nav-buttons side="left">
+		<button type="button" class="button-icon iconeTop ion-chevron-left"></button>
+	</ion-nav-buttons>
+
+	<ion-nav-title>
+		<span class="navTitle">Issue Details</span>
+	</ion-nav-title>
+  <ion-content>
+	
+	<img class="img_Issue" src="http://www.divisionbrand.com/wp-content/uploads/2013/12/melb-city-tag.jpg">
+    <button style="color: red; margin-left: 80%; font-size: 1.5em" type="button" class="ion-edit"></button>
+
+
+	<div style="margin: -1em 1em">
+		<h3>Description</h3>
+			<input style="width: 100%; padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="description déjà disponible">
+	  	<h3>State</h3>
+			<ion-list style="border: none">
+			  <ion-radio ng-model="choice" ng-value="new">New</ion-radio>
+			  <ion-radio ng-model="choice" ng-value="inProgress">In Progress</ion-radio>
+			  <ion-radio ng-model="choice" ng-value="resolved">Resolved</ion-radio>
+			</ion-list>
+
+		<h3>Tags</h3>
+			<input style="width: 100%; padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="tag">
+	</div>
+
+
 </ion-view>

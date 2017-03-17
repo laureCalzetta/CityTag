@@ -9,7 +9,7 @@
 	</ion-nav-title>
   	<ion-content>
 
-		<div class="list">
+		<div class="list" style="margin-top: 1em">
 	        <label style="margin-right: 1em; border: none" class="item item-input item-floating-label">
 	        	<h2>Tags</h2>
 	          <input style="padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="tag1, tag2, …"/>
@@ -20,16 +20,18 @@
 	        </label>
 	      	<div class="item">
 		        <h2>State</h2>
-		        <ion-checkbox class="choice" ng-model="new.checked" ng-change="newChange()">
-		          New
-		        </ion-checkbox>
-		        <pre ng-bind="new | json"></pre>
-		        <ion-checkbox class="choice" ng-model="inProgress.checked" ng-change="pinProgressChange()">
-		          In Progress
-		        </ion-checkbox>
-		        <pre ng-bind="inProgress | json"></pre>
-		        <ion-checkbox class="choice" ng-model="resolved.checked" ng-change="resolvedChange()">
-		          Resolved
+		        <div>
+		        	<ion-checkbox class="choice" ng-model="new.checked" ng-change="newChange()">
+			          New
+			        </ion-checkbox>
+			        <pre ng-bind="new | json"></pre>
+			        <ion-checkbox class="choice" ng-model="inProgress.checked" ng-change="pinProgressChange()">
+			          In Progress
+			        </ion-checkbox>
+			        <pre ng-bind="inProgress | json"></pre>
+			        <ion-checkbox class="choice" ng-model="resolved.checked" ng-change="resolvedChange()">
+			          Resolved
+			      </div>
 		        </ion-checkbox>
 		        <pre ng-bind="resolved | json"></pre>
 	      	</div>

@@ -10,34 +10,44 @@
   ]
 } -->
 
-<ion-view view-title="New User">
+<ion-view>
+	<ion-nav-title>
+		<span class="navTitle">Create an account</span>
+	</ion-nav-title>
+
+	<ion-nav-buttons side="left">
+		<button type="button" class="button-icon iconeTop icon ion-chevron-left"></button>
+	</ion-nav-buttons>
+
   <ion-content>
 	<div class="list">
 		<label class="item item-input item-floating-label">
-			<span class="input-label">Username</span>
+			<span class="input-label form">Username</span>
 			<input type="text" placeholder="Username">
 		</label>
 		<label class="item item-input item-floating-label">
-			<span class="input-label">First Name</span>
+			<span class="input-label form">First Name</span>
 			<input type="text" placeholder="First Name">
 		</label>
 		<label class="item item-input item-floating-label">
-			<span class="input-label">Last Name</span>
+			<span class="input-label form">Last Name</span>
 			<input type="text" placeholder="Last Name">
 		</label>
 		<label class="item item-input item-floating-label">
-			<span class="input-label">Phone Number</span>
+			<span class="input-label form">Phone Number</span>
 			<input type="tel" placeholder="Phone Number">
 		</label>
 		<label class="item item-input item-floating-label">
-			<span class="input-label">Phone Number</span>
+			<span class="input-label form">Phone Number</span>
 			<input type="password" placeholder="Password">
 		</label>
 		<label class="item item-input item-floating-label">
-			<span class="input-label">Confirme Phone Number</span>
+			<span class="input-label form">Confirme Phone Number</span>
 			<input type="password" placeholder="Confirme Password">
 		</label>
-      	<button class="button button-full button-positive" ng-click="newUserCtrl.logIn()" ng-disabled="loginForm.$invalid">Create a new account</button>
+
+      	<button class="btn" ng-click="" ng-disabled="">Create</button>
+
 	</div>
   </ion-content>
 </ion-view>

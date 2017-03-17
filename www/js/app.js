@@ -127,6 +127,13 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       templateUrl: 'templates/filters.html'
     })
 
+    .state('issueDetails', {
+      url: '/issueDetails',
+      // controller: 'LoginCtrl',
+      // controllerAs: "loginCtrl",
+      templateUrl: 'templates/issueDetails.html'
+    })
+
     .state('addIssue', {
       url: '/addIssue',
       // controller: 'LoginCtrl',
