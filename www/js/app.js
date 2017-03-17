@@ -92,18 +92,26 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
     })
 
 
-    // This is the issue details state.
-    .state('tab.issueDetails', {
-      // We use a parameterized route for this state.
-      // That way we'll know which issue to display the details of.
-      url: '/issueDetails/:issueId',
+    // This is the issue details state from list.
+    .state('tab.issueDetailsList', {
+      url: '/issueDetailsList/:issueId',
       views: {
-        // Here we use the same "tab-issueList" view as the previous state.
-        // This means that the issue details template will be displayed in the same tab as the issue list.
         'tab-issueList': {
-          templateUrl: 'templates/issueDetails.html'
-        }
-      }
+                controller: 'SingleCtrl',
+                controllerAs: 'singleCtrl',
+                templateUrl: 'templates/issueDetails.html'
+              }}
+    })
+
+    // This is the issue details state from list.
+    .state('tab.issueDetailsMap', {
+      url: '/issueDetailsMap/:issueId',
+      views: {
+        'tab-issueMap': {
+                controller: 'SingleCtrl',
+                controllerAs: 'singleCtrl',
+                templateUrl: 'templates/issueDetails.html'
+              }}
     })
 
     .state('login', {
