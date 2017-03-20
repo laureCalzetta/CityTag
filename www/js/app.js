@@ -7,7 +7,8 @@ angular.module('citizen-engagement', [
   'ionic',
   'angular-storage',
   'geolocation',
-  'leaflet-directive'
+  'leaflet-directive',
+  'ion-floating-menu'
 ])
 
 .run(function($ionicPlatform) {
