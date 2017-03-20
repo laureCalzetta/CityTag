@@ -11,40 +11,53 @@
 } -->
 
 <ion-view>
+
 	<ion-nav-title>
 		<span class="navTitle">Create an account</span>
 	</ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button type="button" class="button-icon iconeTop icon ion-android-send"></button>
 
+  </ion-nav-buttons>
 
   <ion-content>
-	<div class="list">
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">Username</span>
-			<input type="text" placeholder="Username">
-		</label>
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">First Name</span>
-			<input type="text" placeholder="First Name">
-		</label>
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">Last Name</span>
-			<input type="text" placeholder="Last Name">
-		</label>
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">Phone Number</span>
-			<input type="tel" placeholder="Phone Number">
-		</label>
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">Phone Number</span>
-			<input type="password" placeholder="Password">
-		</label>
-		<label class="item item-input item-floating-label">
-			<span class="input-label form">Confirme Phone Number</span>
-			<input type="password" placeholder="Confirme Password">
-		</label>
 
-      	<button class="btn" ng-click="" ng-disabled="">Create</button>
+    <!-- A banner. Choose an image and save it as www/img/banner.jpg -->
+    <!--<img src="img/banner.jpg" width="100%" alt="Citizen Engagement" />-->
 
-	</div>
-  </ion-content>
+    <!-- A short welcome message. -->
+    <div>
+      <p style="margin-top: 5%; font-size: 2em; text-align: center">Welcome to</p>
+      <img style="margin: 10% 20% " width="60%" src="img/icone.png"></img>
+    </div>
+
+
+		<div class="list">
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">Username</span>
+				<input type="text" placeholder="Username">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">First Name</span>
+				<input type="text" placeholder="First Name">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">Last Name</span>
+				<input type="text" placeholder="Last Name">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">Phone Number</span>
+				<input type="tel" placeholder="Phone Number">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">Phone Number</span>
+				<input type="password" placeholder="Password">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label form">Confirme Phone Number</span>
+				<input type="password" placeholder="Confirme Password">
+			</label>
+		  	<button class="btn" ng-click="" ng-disabled="">Create</button>
+		</div>
+	</ion-content>
 </ion-view>

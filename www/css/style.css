@@ -3,6 +3,11 @@ body {
     font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ion-content {
   margin-bottom: 10%;
 }

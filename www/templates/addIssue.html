@@ -23,6 +23,13 @@
 
 			<h3>Tags</h3>
 				<input style="width: 100%; padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="tag">
+
+
+		<div ng-app="myApp" ng-controller="MyCtrl">
+    <tags-input ng-model="tags">
+        <auto-complete source="loadTags($query)"></auto-complete>
+    </tags-input>
+</div>
 		</div>
 	</ion-content>
 
