@@ -31,6 +31,7 @@ angular.module('citizen-engagement', [
 
 angular.module('citizen-engagement').controller('MyCtrl', function($log) {
   var myCtrl = this;
+
 });
 
 angular.module('citizen-engagement').config(function($ionicConfigProvider) {
@@ -94,25 +95,19 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
 
     // This is the issue details state from list.
-    .state('tab.issueDetailsList', {
+    .state('issueDetailsList', {
       url: '/issueDetailsList/:issueId',
-      views: {
-        'tab-issueList': {
-                controller: 'IssueDetailCtrl',
-                controllerAs: 'issueDetailCtrl',
-                templateUrl: 'templates/issueDetails.html'
-              }}
+      controller: 'IssueDetailCtrl',
+      controllerAs: 'issueDetailCtrl',
+      templateUrl: 'templates/issueDetails.html'
     })
 
     // This is the issue details state from list.
-    .state('tab.issueDetailsMap', {
+    .state('issueDetailsMap', {
       url: '/issueDetailsMap/:issueId',
-      views: {
-        'tab-issueMap': {
-                controller: 'IssueDetailCtrl',
-                controllerAs: 'issueDetailCtrl',
-                templateUrl: 'templates/issueDetails.html'
-              }}
+      controller: 'IssueDetailCtrl',
+      controllerAs: 'issueDetailCtrl',
+      templateUrl: 'templates/issueDetails.html'
     })
 
     .state('login', {
@@ -138,8 +133,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('filters', {
       url: '/filters',
-          // controller: 'MapCtrl',
-          // controllerAs: 'mapCtrl',
+           controller: 'IssueCtrl',
+           controllerAs: 'issueCtrl',
       templateUrl: 'templates/filters.html'
     })
 

@@ -10,7 +10,8 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
         method: 'GET',
         url: apiUrl + '/issues',
         params: {
-          page: page
+          page: page,
+          pagesize: 50
         }
       }).then(function(res) {
         if (res.data.length) {
@@ -37,19 +38,27 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
     });
   };
 
-    //Retreive all comments of an issue
-    service.getIssueComments = function(id){
-      return $http({
-        method: 'GET',
-        url: apiUrl+'/issues/'+ id +'/comments?include=author',
-      }).then(function(res) {
-        // If successful, give the token to the authentication service.
-       return res.data;
-      }).catch(function() {
-        // If an error occurs, hide the loading message and show an error message.
-        console.log("error no such issue");
-      });
+    service.getIssueComments = function(id, page, items) {
+      page = page || 1; // Start from page 1
+      items = items || [];
+        // GET the current page
+        return $http({
+          method: 'GET',
+          url: apiUrl+'/issues/'+ id +'/comments?include=author',
+          params: {
+            page: page
+          }
+        }).then(function(res) {
 
+          if (res.data.length) {
+            // If there are any items, add them
+            // and recursively fetch the next page
+            items = items.concat(res.data);
+            return service.getIssueComments(id ,page + 1, items);
+          }
+
+          return items;
+        });
     };
 
 
@@ -82,7 +91,6 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
       params: {include: 'author'}
 
     }).then(function(res) {
-     console.log(res.data);
      return res.data;
 
     }).catch(function(err) {
@@ -93,17 +101,18 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
 
   }
 
-
-
   return service;
 
 });
 
-angular.module('citizen-engagement').controller('IssueCtrl', function(IssueService) {
+angular.module('citizen-engagement').controller('IssueCtrl', function(IssueService, $ionicHistory) {
   var issueCtrl = this;
 
+  issueCtrl.goBack = function (){
+    $ionicHistory.goBack();
+  };
+
   IssueService.getIssues().then(function(issues) {
-    console.log(issues);
     issueCtrl.issues = issues;
   })
 });

@@ -1,6 +1,11 @@
-angular.module('citizen-engagement').controller('IssueDetailCtrl', function(IssueService ,$stateParams, $scope) {
+angular.module('citizen-engagement').controller('IssueDetailCtrl', function(IssueService ,$stateParams, $scope, $ionicHistory) {
   // The $ionicView.beforeEnter event happens every time the screen is displayed.
   var issueDetailCtrl = this;
+
+  issueDetailCtrl.goBack = function (){
+    $ionicHistory.goBack();
+  };
+
   $scope.$on('$ionicView.beforeEnter', function() {
 
     // Re-initialize the user object every time the screen is displayed.
@@ -12,11 +17,11 @@ angular.module('citizen-engagement').controller('IssueDetailCtrl', function(Issu
       issueDetailCtrl.issue = issue;
     });
     IssueService.getIssueComments(id).then(function(comments) {
+
       issueDetailCtrl.comments = comments;
     });
 
     issueDetailCtrl.addComment = function(){
-      console.log("click");
       return IssueService.addComment(id, issueDetailCtrl.text).then(function(comment) {
         issueDetailCtrl.comments.push(comment);
         issueDetailCtrl.text = "";
