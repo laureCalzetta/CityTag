@@ -128,27 +128,13 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       templateUrl: 'templates/newUser.html'
     })
 
-    .state('tab.filters', {
+    .state('filters', {
       url: '/filters',
-      views: {
-        'tab-issueMap': {
           // controller: 'MapCtrl',
           // controllerAs: 'mapCtrl',
-          templateUrl: 'templates/filters.html'
-        }
-      }
+      templateUrl: 'templates/filters.html'
     })
 
-    .state('tab.filtersList', {
-      url: '/filtersList',
-      views: {
-        'tab-issueList': {
-          // controller: 'MapCtrl',
-          // controllerAs: 'mapCtrl',
-          templateUrl: 'templates/filters.html'
-        }
-      }
-    })
 
     .state('issueDetails', {
       url: '/issueDetails',
@@ -169,6 +155,13 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       // controller: 'LoginCtrl',
       // controllerAs: "loginCtrl",
       templateUrl: 'templates/editIssue.html'
+    })
+
+    .state('editUser', {
+      url: '/editUser',
+      // controller: 'LoginCtrl',
+      // controllerAs: "loginCtrl",
+      templateUrl: 'templates/editUser.html'
     });
 
 
