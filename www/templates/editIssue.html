@@ -12,12 +12,13 @@
 
 		<div style="margin: -1em 1em">
 			<h3>Description</h3>
-		        <textarea class="textBloc" type="text" placeholder="{{issueDetailCtrl.issue.description}}"></textarea>
+		        <textarea class="textBloc" type="text" placeholder="Add comment">{{issueDetailCtrl.issue.description}}</textarea>
 		  	<h3>State</h3>
 				<ion-list style="border: none">
 				  <ion-radio ng-model="choice" ng-value="new">New</ion-radio>
 				  <ion-radio ng-model="choice" ng-value="inProgress">In Progress</ion-radio>
 				  <ion-radio ng-model="choice" ng-value="resolved">Resolved</ion-radio>
+				  <ion-radio ng-model="choice" ng-value="resolved">Rejected</ion-radio>
 				</ion-list>
 
 			<h3>Tags</h3>

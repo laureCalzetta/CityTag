@@ -1,6 +1,6 @@
 <ion-view>
 	<ion-nav-buttons side="right">
-		<button ui-sref="editIssue" type="button" class="button-icon iconeTop ion-edit"></button>
+		<button ui-sref="editIssue({ issueId: issue.id })" g-repeat="issue in issueCtrl.issues" href="#" type="button" class="button-icon iconeTop ion-edit"></button>
 	</ion-nav-buttons>
 
 	<ion-nav-title>
@@ -9,7 +9,6 @@
   <ion-content>
 	<img class="img_Issue" src="{{issueDetailCtrl.issue.imageUrl}}">
 	<div class="card">
-		<div style="margin: 1em 1em">
 			<h3>Description</h3>
 				<p>{{issueDetailCtrl.issue.description}}</p>
 		  	<h3>State</h3>
@@ -18,9 +17,8 @@
 				<p>{{issueDetailCtrl.issue.createdAt | date:'yyyy-MM-dd HH:mm'}}</p>
 			<h3>Tag</h3>
 				<p>Tag 1, tag 2</p>
-		</div>
 	</div>
-	<div class='card 'style="margin-top: 2em">
+	<div class='card'>
 			<form name="commentForm">
 
     		<h3>Comments</h3>
@@ -30,17 +28,15 @@
 				<button class="btnSend icon ion-android-send " ng-click="issueDetailCtrl.addComment()" ng-disabled=""></button>
 					<!-- <div class="col send ion-android-send"></div> -->
 		  	</div>
-
-		  	<div>
-					<ul>
-						<li ng-repeat="Comment in issueDetailCtrl.comments" class="comment">
-							<h4>{{Comment.author.firstname}} {{Comment.author.lastname}} – <span class="date">{{Comment.createdAt | date:'yyyy-MM-dd HH:mm'}}</span></h4>
-			  			<div>
-			  				<p>{{Comment.text}}</p>
-			  			</div>
-						</li>
-					</ul>
-
+		  	<div style="width: 90%">
+				<ul>
+					<li ng-repeat="Comment in issueDetailCtrl.comments" class="comment">
+						<h4>{{Comment.author.firstname}} {{Comment.author.lastname}} – <span class="date">{{Comment.createdAt | date:'yyyy-MM-dd HH:mm'}}</span></h4>
+		  			<div>
+		  				<p>{{Comment.text}}</p>
+		  			</div>
+					</li>
+				</ul>
 		  	</div>
 
 			</form>

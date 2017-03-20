@@ -167,3 +167,8 @@ p {
   opacity: 1;
   text-decoration: none;
 }
+
+.card {
+  margin: 1em;
+  padding: 0.5em;
+}

@@ -124,44 +124,32 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('newUser', {
       url: '/newUser',
-      // controller: 'NewUserCtrl',
-      // controllerAs: "newUserCtrl",
       templateUrl: 'templates/newUser.html'
     })
 
     .state('editUser', {
       url: '/editUser',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
       templateUrl: 'templates/editUser.html'
     })
 
     .state('filters', {
       url: '/filters',
-          // controller: 'MapCtrl',
-          // controllerAs: 'mapCtrl',
       templateUrl: 'templates/filters.html'
     })
 
 
     .state('issueDetails', {
       url: '/issueDetails',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
       templateUrl: 'templates/issueDetails.html'
     })
 
     .state('addIssue', {
       url: '/addIssue',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
       templateUrl: 'templates/addIssue.html'
     })
 
     .state('editIssue', {
       url: '/editIssue',
-      // controller: 'LoginCtrl',
-      // controllerAs: "loginCtrl",
       templateUrl: 'templates/editIssue.html'
     });
 
