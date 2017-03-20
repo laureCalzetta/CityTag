@@ -1,20 +1,5 @@
 angular.module('citizen-engagement').factory('IssueService', function($http, apiUrl) {
   var service = {};
-/*
-  //Get all issues
-  service.getIssues = function() {
-    return $http({
-      method: 'GET',
-      url: apiUrl + '/issues'
-    }).then(function(res) {
-      return res.data;
-    }).catch(function(err) {
-      $log.error(err);
-    });
-  };
-*/
-
-
 
   //Get all issues
   service.getIssues = function(page, items) {
@@ -37,6 +22,56 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
         return items;
       });
   };
+
+  //Get one issue
+  service.getIssue = function (id){
+    return $http({
+      method: 'GET',
+      url: apiUrl + '/issues/'+ id
+    }).then(function(res) {
+      return res.data;
+    }).catch(function() {
+      // If an error occurs, hide the loading message and show an error message.
+      console.log("error no such issue");
+
+    });
+  };
+
+    //Retreive all comments of an issue
+    service.getIssueComments = function(id){
+      return $http({
+        method: 'GET',
+        url: apiUrl+'/issues/'+ id +'/comments?include=author',
+      }).then(function(res) {
+        // If successful, give the token to the authentication service.
+       return res.data;
+      }).catch(function() {
+        // If an error occurs, hide the loading message and show an error message.
+        console.log("error no such issue");
+      });
+
+    };
+
+
+    service.addIssue = function(issue){
+      return $http({
+        method: 'POST',
+        url: apiUrl+'/issues',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: issue
+      }).then(function(res) {
+
+        // ajout réussi
+
+      }).catch(function(err) {
+        console.log("Error adding issue");
+
+      });
+    }
+
+
 
   return service;
 

@@ -13,11 +13,11 @@
 
 	<div style="margin: 1em 1em">
 		<h3>Description</h3>
-			<p>A description for know what is the tag and blablabla</p>
+			<p>{{issueDetailCtrl.issue.description}}</p>
 	  	<h3>State</h3>
-			<p>new</p>
+			<p>{{issueDetailCtrl.issue.state}}</p>
 	  	<h3>Created at</h3>
-			<p>2017-03-12</p>
+			<p>{{issueDetailCtrl.issue.createdAt | date:'yyyy-MM-dd HH:mm:ss'}}</p>
 		<h3>Tag</h3>
 			<p>Tag 1, tag 2</p>
 	</div>

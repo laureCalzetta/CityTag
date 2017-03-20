@@ -97,8 +97,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       url: '/issueDetailsList/:issueId',
       views: {
         'tab-issueList': {
-                controller: 'SingleCtrl',
-                controllerAs: 'singleCtrl',
+                controller: 'IssueDetailCtrl',
+                controllerAs: 'issueDetailCtrl',
                 templateUrl: 'templates/issueDetails.html'
               }}
     })
@@ -108,8 +108,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       url: '/issueDetailsMap/:issueId',
       views: {
         'tab-issueMap': {
-                controller: 'SingleCtrl',
-                controllerAs: 'singleCtrl',
+                controller: 'IssueDetailCtrl',
+                controllerAs: 'issueDetailCtrl',
                 templateUrl: 'templates/issueDetails.html'
               }}
     })
