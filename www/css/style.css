@@ -68,26 +68,6 @@ p {
 
 .iconeTop:hover {
   color: black;
-
-}
-
-
-.btn {
-  opacity: 0.5;
-  background: #E91C1C;
-  background-image: -webkit-linear-gradient(top, #E91C1C, #bf1919);
-  background-image: -moz-linear-gradient(top, #E91C1C, #bf1919);
-  background-image: -ms-linear-gradient(top, #E91C1C, #bf1919);
-  background-image: -o-linear-gradient(top, #E91C1C, #bf1919);
-  background-image: linear-gradient(to bottom, #E91C1C, #bf1919);
-  margin: 0em 40%;
-  text-align: center;
-  border: none;
-  border-radius: 40px;
-  color: white;
-  padding: 10px 20px 10px 20px;
-  margin: 1em 25% 0 25%;
-  width: 50%;
 }
 
 .btn:hover {
