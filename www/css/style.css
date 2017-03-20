@@ -45,6 +45,9 @@ h1 {
     color: #E91C1C;
 }
 
+.positive {
+    color:#E91C1C;
+}
 
 h2 {
     line-height:1em;
@@ -57,7 +60,7 @@ h3 {
     font-size: 1em;
 }
 h4 {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-left: 1em;
 }
 
