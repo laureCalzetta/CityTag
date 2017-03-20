@@ -7,34 +7,42 @@
 		<span class="navTitle"> Issue Details</span>
 	</ion-nav-title>
   <ion-content>
-	<img class="img_Issue" src="http://www.divisionbrand.com/wp-content/uploads/2013/12/melb-city-tag.jpg">
-
-	<div style="margin: 1em 1em">
-		<h3>Description</h3>
-			<p>{{issueDetailCtrl.issue.description}}</p>
-	  	<h3>State</h3>
-			<p>{{issueDetailCtrl.issue.state}}</p>
-	  	<h3>Created at</h3>
-			<p>{{issueDetailCtrl.issue.createdAt | date:'yyyy-MM-dd HH:mm:ss'}}</p>
-		<h3>Tag</h3>
-			<p>Tag 1, tag 2</p>
+	<img class="img_Issue" src="{{issueDetailCtrl.issue.imageUrl}}">
+	<div class="card">
+		<div style="margin: 1em 1em">
+			<h3>Description</h3>
+				<p>{{issueDetailCtrl.issue.description}}</p>
+		  	<h3>State</h3>
+				<p>{{issueDetailCtrl.issue.state}}</p>
+		  	<h3>Created at</h3>
+				<p>{{issueDetailCtrl.issue.createdAt | date:'yyyy-MM-dd HH:mm'}}</p>
+			<h3>Tag</h3>
+				<p>Tag 1, tag 2</p>
+		</div>
 	</div>
+	<div class='card 'style="margin-top: 2em">
+			<form name="commentForm">
 
-	<div style="margin-top: 2em">
-        <label style="margin-right: 1em; border: none" class="item item-input item-floating-label">
     		<h3>Comments</h3>
     		<div class="row">
-		  		<input class="col" style="padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="Your comment"/>
-		  		<div class="col send ion-android-send"></div>
+		  		<input ng-model="issueDetailCtrl.text" class="col" style="padding: 0em 1em; border-bottom: 0.5px solid #E91C1C; border-right: 1px solid #E91C1C;" type="text" placeholder="Your comment"/>
+					<button class="button button-positive" ng-click="issueDetailCtrl.addComment()" ng-disabled="">Add your comment</button>
+					<!-- <div class="col send ion-android-send"></div> -->
 		  	</div>
 
 		  	<div>
-		  		<h4>Pseudo – <span>2017-03-02</span></h4>
-		  		<div class="comment">
-		  			<p>Il s'agit d'un commentaire concernant un issue spécifique dont on est sur la page des détails</p>
-		  		</div>
+					<ul>
+						<li ng-repeat="Comment in issueDetailCtrl.comments" class="comment">
+							<h4>{{Comment.author.firstname}} {{Comment.author.lastname}} – <span>{{Comment.createdAt | date:'yyyy-MM-dd HH:mm'}}</span></h4>
+			  			<div>
+			  				<p>{{Comment.text}}</p>
+			  			</div>
+						</li>
+					</ul>
+
 		  	</div>
-        </label>
+
+			</form>
 	</div>
 
 </ion-view>

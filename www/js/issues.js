@@ -71,6 +71,28 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
       });
     }
 
+    service.addComment = function(id, text){
+    return $http({
+      method: 'POST',
+      url: apiUrl+'/issues/'+ id +'/comments',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {"text": text},
+      params: {include: 'author'}
+
+    }).then(function(res) {
+     console.log(res.data);
+     return res.data;
+
+    }).catch(function(err) {
+      console.log(err);
+
+
+    });
+
+  }
+
 
 
   return service;

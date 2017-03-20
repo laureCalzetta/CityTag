@@ -1,4 +1,4 @@
-angular.module('citizen-engagement').controller('IssueDetailCtrl', function(IssueService ,$stateParams, $scope, $state) {
+angular.module('citizen-engagement').controller('IssueDetailCtrl', function(IssueService ,$stateParams, $scope) {
   // The $ionicView.beforeEnter event happens every time the screen is displayed.
   var issueDetailCtrl = this;
   $scope.$on('$ionicView.beforeEnter', function() {
@@ -9,21 +9,19 @@ angular.module('citizen-engagement').controller('IssueDetailCtrl', function(Issu
     var id = $stateParams.issueId;
 
     IssueService.getIssue(id).then(function(issue) {
-      console.log(issue);
       issueDetailCtrl.issue = issue;
     });
     IssueService.getIssueComments(id).then(function(comments) {
       issueDetailCtrl.comments = comments;
     });
-/*
-    //get current logged user so when he adds a comment we know who he is
-    getCurrentUser().then(function(user) {
 
-      $scope.user = user;
-      console.log("testuser");
-      console.log($scope.user);
-    });
-*/
+    issueDetailCtrl.addComment = function(){
+      console.log("click");
+      return IssueService.addComment(id, issueDetailCtrl.text).then(function(comment) {
+        issueDetailCtrl.comments.push(comment);
+        issueDetailCtrl.text = "";
+      });
+    }
   });
 
 
