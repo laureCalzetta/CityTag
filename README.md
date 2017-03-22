@@ -32,7 +32,7 @@ L'application propose d'avoir la liste des issues sous deux formes, soit sous fo
 
 Lors de l'ouverture de l'application, la page de login va s'ouvrir.
 
-![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/User/Login.png)
 
 Il est nécessaire d'y entrer son nom d'utilisateur et son mot de passe. Si vous n'avez pas encore de compte, il est possible d'en créer un en cliquant sur "Create an account".
 
