@@ -15,17 +15,16 @@ L'application propose d'avoir la liste des issues sous deux formes, soit sous fo
   * Creation du compte
 
 * [Issues](#issues)
-  * Issues Map
-  * Issues Liste
-  * Filtres
+  * [Issues Map](#issueMap)
+  * [Issues List](#issueList)
+  * [Filtres](#filtres)
+  * [Issue détails](#issueDetails)
 
 * [Ajout d'issues](#ajoutIssue)
 
 * [Profile](#profile)
   * Informations
   * Se deconnecter
-
-
 
 
 ## Login
@@ -40,16 +39,31 @@ Il est nécessaire d'y entrer son nom d'utilisateur et son mot de passe. Si vous
 Vous allez être redirigé sur la page prévu pour. Il y sera demandé d'entrer un nom d'utilisateur, son prénom, son nom et de créer un mot de passe. Il est également possible d'y ajouter un numéro de téléphone (optionel).
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/User/CreateAnAccount.png)
 
+Lors de la connexion, l'application mène directement à la carte où sont positionnés les différents issues existants.
+
+Le menu se divise en trois parties :
+* Issue Map
+* Issue Liste
+* Profile
 
 
 ## Issues
+
+**Issue Map**
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/MapList.png)
 
+**Issue Liste**
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueListe.png)
 
+**Filtres**
+Il est possible de filtrer la liste (ou la carte) avec l'option "Filtres" qui se situe en haut à droite de l'application
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/FiltersOK.png)
+
+
+**Issue details**
+Si l'on clique sur un issue (sur le repère sur la carte ou sur l'issue dans la liste), cela mène aux détails de l'issue.
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueDetails.png)
 
-![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/FiltersOK.png)
 
 
 ## Ajout d'issues
@@ -57,4 +71,5 @@ Vous allez être redirigé sur la page prévu pour. Il y sera demandé d'entrer 
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/addIssue.png)
 
 ## Profile
-* …
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/User/profile.png)
+
