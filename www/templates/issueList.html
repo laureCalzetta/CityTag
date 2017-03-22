@@ -1,7 +1,7 @@
 <ion-view>
 
  	<ion-nav-buttons side="right">
-	    <button ui-sref="filters" type="button" class="button-icon iconeTop icon ion-android-options" ng-click="showFilter()"></button>
+	    <button ui-sref="listFilters" type="button" class="button-icon iconeTop icon ion-android-options"></button>
   	</ion-nav-buttons>
 
     <ion-floating-button ui-sref="addIssue" click="myEvent()" has-footer="true" button-color="#E91C1C" icon="ion-plus" icon-color="#fff">
@@ -10,7 +10,7 @@
 
 
     <div class="list">
-	    <a class="item item-thumbnail-left" ui-sref="issueDetailsList({ issueId: issue.id })" ng-repeat="issue in issueCtrl.issues" href="#">
+	    <a class="item item-thumbnail-left" ui-sref="issueDetails({ issueId: issue.id })" ng-repeat="issue in issueCtrl.issues" href="#">
 			<img ng-src="{{issue.imageUrl}}">
       <h2 class="positive">{{issue.description}}</h2>
       <p>{{issue.state}}</p>

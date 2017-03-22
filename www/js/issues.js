@@ -77,6 +77,58 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
     };
 
 
+    //Get issues from a LatLng by location
+  service.getIssuesByLocation = function(map, state, page, items) {
+    page = page || 1; // Start from page 1
+    var bounds = map.getBounds();
+    items = items || [];
+    var requestData = {};
+    if(state == ""){
+      requestData.state = ['new','inProgress','resolved','rejected'];
+    }
+    else{
+      requestData.state = state;
+    }
+
+    // POST method
+    return $http({
+      method: 'POST',
+      url: apiUrl + '/issues/searches',
+      params: {
+        page: page,
+        pagesize: 50
+      },
+      data:{
+        location: {
+          '$geoWithin': {
+           '$geometry': {
+             type: 'Polygon',
+             coordinates: [ [ [ bounds.getSouthWest().lng, bounds.getSouthWest().lat ],
+                              [ bounds.getNorthWest().lng, bounds.getNorthWest().lat ],
+                              [ bounds.getNorthEast().lng, bounds.getNorthEast().lat ],
+                              [ bounds.getSouthEast().lng, bounds.getSouthEast().lat ],
+                              [ bounds.getSouthWest().lng, bounds.getSouthWest().lat ]
+                          ] ]
+           }
+          }
+        },
+        state: {
+          "$in": requestData.state
+        }
+      }
+
+    }).then(function(res) {
+      if (res.data.length) {
+        // If there are any items, add them
+        // and recursively fetch the next page
+        items = items.concat(res.data);
+        return service.getIssuesByLocation(map, state, page + 1, items);
+      }
+      return items;
+    });
+  };
+
+
     service.addIssue = function(issue){
       return $http({
         method: 'POST',
@@ -122,13 +174,9 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
 angular.module('citizen-engagement').controller('IssueCtrl', function(IssueService, $ionicHistory, $stateParams, $state) {
   var issueCtrl = this;
 
-
   if($stateParams.filters != null){
     var stateFilters = $stateParams.filters.split("&");
   }
-
-
-  //console.log(stateFilters);
 
   IssueService.getIssues(stateFilters).then(function(issues){
     issueCtrl.issues = issues;

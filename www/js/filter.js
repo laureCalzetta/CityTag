@@ -16,8 +16,6 @@ angular.module('citizen-engagement').controller('FilterCtrl', function(IssueServ
   filterCtrl.goBack = function (){
     var filters = "";
 
-    console.log($ionicHistory.backView());
-
     if(filterCtrl.newChecked){
       filters += "&"+filterCtrl.newChecked;
     }

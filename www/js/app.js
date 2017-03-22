@@ -72,7 +72,7 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
     })
 
     .state('tab.issueMap', {
-      url: '/issueMap',
+      url: '/issueMap/:filters',
       views: {
         'tab-issueMap': {
           controller: 'MapCtrl',
@@ -95,16 +95,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
 
     // This is the issue details state from list.
-    .state('issueDetailsList', {
-      url: '/issueDetailsList/:issueId',
-      controller: 'IssueDetailCtrl',
-      controllerAs: 'issueDetailCtrl',
-      templateUrl: 'templates/issueDetails.html'
-    })
-
-    // This is the issue details state from list.
-    .state('issueDetailsMap', {
-      url: '/issueDetailsMap/:issueId',
+    .state('issueDetails', {
+      url: '/issueDetails/:issueId',
       controller: 'IssueDetailCtrl',
       controllerAs: 'issueDetailCtrl',
       templateUrl: 'templates/issueDetails.html'
@@ -127,8 +119,15 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       templateUrl: 'templates/editUser.html'
     })
 
-    .state('filters', {
-      url: '/filters',
+    .state('mapFilters', {
+      url: '/mapFilters',
+      controller: 'FilterCtrl',
+     controllerAs: 'filterCtrl',
+     templateUrl: 'templates/filters.html'
+    })
+
+    .state('listFilters', {
+      url: '/listFilters',
       controller: 'FilterCtrl',
      controllerAs: 'filterCtrl',
      templateUrl: 'templates/filters.html'
