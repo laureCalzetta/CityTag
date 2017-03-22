@@ -36,16 +36,25 @@ Lors de l'ouverture de l'application, la page de login va s'ouvrir.
 
 Il est nécessaire d'y entrer son nom d'utilisateur et son mot de passe. Si vous n'avez pas encore de compte, il est possible d'en créer un en cliquant sur "Create an account".
 
+
 Vous allez être redirigé sur la page prévu pour. Il y sera demandé d'entrer un nom d'utilisateur, son prénom, son nom et de créer un mot de passe. Il est également possible d'y ajouter un numéro de téléphone (optionel).
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/User/CreateAnAccount.png)
+
 
 
 ## Issues
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/MapList.png)
 
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueListe.png)
+
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueDetails.png)
+
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/FiltersOK.png)
 
 
 ## Ajout d'issues
 
-* …
+![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/addIssue.png)
 
 ## Profile
 * …
