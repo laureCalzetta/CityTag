@@ -22,8 +22,8 @@ L'application propose d'avoir la liste des issues sous deux formes, soit sous fo
 * [Ajout d'issues](#ajoutIssue)
 
 * [Profile](#profile)
- * Informations
- * Se deconnecter
+  * Informations
+  * Se deconnecter
 
 
 
