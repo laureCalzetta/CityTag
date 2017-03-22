@@ -1,28 +1,43 @@
-angular.module('citizen-engagement').factory('IssueService', function($http, apiUrl) {
+angular.module('citizen-engagement').factory('IssueService', function($http, apiUrl, $ionicLoading) {
   var service = {};
 
   //Get all issues
-  service.getIssues = function(page, items) {
+  service.getIssues = function(state ,page, items) {
     page = page || 1; // Start from page 1
     items = items || [];
+    var requestData = {};
+     if(state != ""){
+       requestData.state = state;
+     }
+     $ionicLoading.show({
+       template: 'Loading issues...',
+       delay: 150
+     });
       // GET the current page
       return $http({
-        method: 'GET',
-        url: apiUrl + '/issues',
+        method: 'POST',
+        url: apiUrl + '/issues/searches',
         params: {
           page: page,
           pagesize: 50
-        }
+        },
+        data: requestData
       }).then(function(res) {
         if (res.data.length) {
           // If there are any items, add them
           // and recursively fetch the next page
           items = items.concat(res.data);
-          return service.getIssues(page + 1, items);
+          return service.getIssues(state,page + 1, items);
         }
+        $ionicLoading.hide();
+
         return items;
+      }).catch(function(res){
+        $ionicLoading.hide();
       });
   };
+
+
 
   //Get one issue
   service.getIssue = function (id){
@@ -96,7 +111,6 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
     }).catch(function(err) {
       console.log(err);
 
-
     });
 
   }
@@ -105,14 +119,20 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
 
 });
 
-angular.module('citizen-engagement').controller('IssueCtrl', function(IssueService, $ionicHistory) {
+angular.module('citizen-engagement').controller('IssueCtrl', function(IssueService, $ionicHistory, $stateParams, $state) {
   var issueCtrl = this;
 
-  issueCtrl.goBack = function (){
-    $ionicHistory.goBack();
-  };
 
-  IssueService.getIssues().then(function(issues) {
+  if($stateParams.filters != null){
+    var stateFilters = $stateParams.filters.split("&");
+  }
+
+
+  //console.log(stateFilters);
+
+  IssueService.getIssues(stateFilters).then(function(issues){
     issueCtrl.issues = issues;
-  })
+  });
+
+
 });

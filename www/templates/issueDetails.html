@@ -2,9 +2,10 @@
 				<ion-nav-buttons side="left">
 					<button type="button" ng-click="issueDetailCtrl.goBack()" class="ion-ios-arrow-left button-icon iconeTop"></button>
 				</ion-nav-buttons>
-				<ion-nav-buttons side="right">
+				<!-- Future implementation -->
+				<!-- <ion-nav-buttons side="right">
 					<button ui-sref="editIssue({ issueId: issue.id })" g-repeat="issue in issueCtrl.issues" href="#" type="button" class="button-icon iconeTop ion-edit"></button>
-				</ion-nav-buttons>
+				</ion-nav-buttons> -->
 
 	<ion-nav-title>
 		<span class="navTitle"> Issue Details</span>
@@ -14,10 +15,6 @@
 	<div class="card">
 
 		<div style="margin: 1em 1em">
-			<div class="item">
-				<h3>Description</h3>
-					<p>{{issueDetailCtrl.issue.description}}</p>
-			</div>
 			<div class="item">
 			<h3>Description</h3>
 				<p>{{issueDetailCtrl.issue.description}}</p>

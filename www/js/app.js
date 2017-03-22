@@ -83,7 +83,7 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
     })
 
     .state('tab.issueList', {
-      url: '/issueList',
+      url: '/issueList/:filters',
       views: {
         'tab-issueList': {
           controller: 'IssueCtrl',
@@ -129,19 +129,21 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('filters', {
       url: '/filters',
-           controller: 'IssueCtrl',
-           controllerAs: 'issueCtrl',
-      templateUrl: 'templates/filters.html'
+      controller: 'FilterCtrl',
+     controllerAs: 'filterCtrl',
+     templateUrl: 'templates/filters.html'
     })
 
 
-    .state('issueDetails', {
-      url: '/issueDetails',
-      templateUrl: 'templates/issueDetails.html'
-    })
+    // .state('issueDetails', {
+    //   url: '/issueDetails',
+    //   templateUrl: 'templates/issueDetails.html'
+    // })
 
     .state('addIssue', {
       url: '/addIssue',
+      controller: 'IssueCtrl',
+      controllerAs: 'issueCtrl',
       templateUrl: 'templates/addIssue.html'
     })
 

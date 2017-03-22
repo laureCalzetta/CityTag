@@ -1,10 +1,7 @@
 <ion-view>
 
   <ion-nav-buttons side="right">
-    <button type="button" class="button-icon iconeTop icon ion-android-done"></button>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="left">
-    <button type="button" ng-click="issueCtrl.goBack()" class="ion-ios-arrow-left button-icon iconeTop"></button>
+    <button type="button" ng-click="filterCtrl.goBack()" class="button-icon iconeTop icon ion-android-done"></button>
   </ion-nav-buttons>
 
 
@@ -14,7 +11,8 @@
   	<ion-content>
 
 		<div class="card">
-	        <label class="item item-input item-floating-label">
+          <!-- Under work -->
+	        <!-- <label class="item item-input item-floating-label">
 	        	<h2>Tags</h2>
 	          	<textarea class="textBloc" type="text" placeholder="tag1, tag2, …"></textarea>
 	        </label>
@@ -22,19 +20,19 @@
 	        	<h2>Creator</h2>
 	          	<textarea class="textBloc" type="text" placeholder="id user"></textarea>
 	        </label>
-	      	<div class="item">
+	      	<div class="item"> -->
 		        <h2>State</h2>
 		        <div>
-		        	<ion-checkbox class="choice" ng-model="new.checked" ng-change="newChange()">
+		        	<ion-checkbox class="choice" ng-true-value="'new'" ng-false-value="false" ng-model="filterCtrl.newChecked" ng-change="filterCtrl.newChange()">
 			          New
 			        </ion-checkbox>
-			        <ion-checkbox class="choice" ng-model="inProgress.checked" ng-change="pinProgressChange()">
+			        <ion-checkbox class="choice" ng-true-value="'inProgress'" ng-false-value="false" ng-model="filterCtrl.inProgressChecked" ng-change="filterCtrl.checkboxChange()">
 			          In Progress
 			        </ion-checkbox>
-			        <ion-checkbox class="choice" ng-model="resolved.checked" ng-change="resolvedChange()">
+			        <ion-checkbox class="choice" ng-true-value="'resolved'" ng-false-value="false" ng-model="filterCtrl.resolvedChecked" ng-change="filterCtrl.checkboxChange()">
 			          Resolved
       		        </ion-checkbox>
-			        <ion-checkbox class="choice" ng-model="rejected.checked" ng-change="rejectedChange()">
+			        <ion-checkbox class="choice" ng-true-value="'rejected'" ng-false-value="false" ng-model="filterCtrl.rejectedChecked" ng-change="filterCtrl.checkboxChange()">
 			          Rejected
       		        </ion-checkbox>
 			      </div>
