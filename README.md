@@ -49,7 +49,7 @@ Le menu se divise en trois parties :
 
 ## Issues
 
-**Issue Map**
+## **Issue Map**
 ![alt tag](https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/MapList.png)
 
 **Issue Liste**
