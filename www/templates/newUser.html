@@ -15,43 +15,44 @@
 	<ion-nav-title>
 		<span class="navTitle">Create an account</span>
 	</ion-nav-title>
-  <ion-nav-buttons side="right">
-    <button type="button" class="button-icon iconeTop icon ion-android-send"></button>
-
-  </ion-nav-buttons>
 
   <ion-content>
 
-    <div>
-      <p class="title">Welcome to</p>
-      <img class="logo" width="60%" src="img/icone.png"></img>
-    </div>
+		<form name="registerForm">
+			<div>
+	      <img class="logo" width="60%" src="img/icone.png"></img>
+	    </div>
 
-		<div class="list">
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">Username</span>
-				<input type="text" placeholder="Username">
-			</label>
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">First Name</span>
-				<input type="text" placeholder="First Name">
-			</label>
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">Last Name</span>
-				<input type="text" placeholder="Last Name">
-			</label>
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">Phone Number</span>
-				<input type="tel" placeholder="Phone Number">
-			</label>
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">Phone Number</span>
-				<input type="password" placeholder="Password">
-			</label>
-			<label class="item item-input item-floating-label">
-				<span class="input-label form">Confirme Phone Number</span>
-				<input type="password" placeholder="Confirme Password">
-			</label>
-		</div>
+			<div class="list card">
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">Username</span>
+					<input type="text" placeholder="Username" ng-model="registerCtrl.user.name" required />
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">Password</span>
+					<input type="password" placeholder="Password" ng-model="registerCtrl.user.password" required />
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">Confirm password</span>
+					<input type="password" placeholder="Please confirm password" ng-model="registerCtrl.user.confirm_password" required />
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">First Name</span>
+					<input type="text" placeholder="First name" ng-model="registerCtrl.user.firstname" required />
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">Last Name</span>
+					<input type="text" placeholder="Family name" ng-model="registerCtrl.user.lastname" required />
+
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label form">Phone Number</span>
+					<input type="text" placeholder="Phone number" ng-model="registerCtrl.user.phone" />
+				</label>
+
+			</div>
+			<button style="background-color: #E91C1C;" class="button button-full button-positive" ng-click="registerCtrl.register()" ng-disabled="">Register</button>
+		</form>
+
 	</ion-content>
 </ion-view>

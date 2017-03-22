@@ -111,6 +111,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('newUser', {
       url: '/newUser',
+      controller: 'RegisterCtrl',
+      controllerAs: 'registerCtrl',
       templateUrl: 'templates/newUser.html'
     })
 
@@ -132,12 +134,6 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
      controllerAs: 'filterCtrl',
      templateUrl: 'templates/filters.html'
     })
-
-
-    // .state('issueDetails', {
-    //   url: '/issueDetails',
-    //   templateUrl: 'templates/issueDetails.html'
-    // })
 
     .state('addIssue', {
       url: '/addIssue',
@@ -169,7 +165,7 @@ angular.module('citizen-engagement').run(function(AuthService, $rootScope, $stat
   $rootScope.$on('$stateChangeStart', function(event, toState) {
 
     // If the user is not logged in and is trying to access another state than "login"...
-    if (!AuthService.authToken && toState.name != 'login') {
+    if (!AuthService.authToken && toState.name != 'login' && toState.name != 'newUser') {
 
       // ... then cancel the transition and go to the "login" state instead.
       event.preventDefault();
