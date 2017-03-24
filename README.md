@@ -78,8 +78,10 @@ Il est possible de commenter les issues et de voir la liste des commentaires dé
 Il est possible d'ajouter une issue depuis la "Issue Map" et la "Issue List". Pour ce faire, il suffit de cliquer sur le bouton "+" qui se trouve en bah à droite, au-desssus du menu.
 
 Ainsi l'application redirige vers la fenêtre d'ajout. Pour ajouter une issue, il est possible de prendre une photo (avec l'appareil photo du téléphone). Il est indispensable d'y ajouter un ou des tags. Une description peut être ajouté (optionel).
+
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/AddIssue.png" height="300">
 
 ## Profile
-Dans cette partie, il est possible de voir ses informations personnel mais surtout de pouvoir se deconnecter.
+Dans cette partie, il est possible de voir ses informations personnel mais surtout de pouvoir se deconnecter en cliquant sur le bouton se trouvant en haut à droite.
+
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/User/Profile.png" height="300">
