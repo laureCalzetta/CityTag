@@ -22,7 +22,7 @@ angular.module('citizen-engagement').factory('MapService', function($http, geolo
   return service;
 });
 
-angular.module('citizen-engagement').controller('MapCtrl', function(MapService, IssueService, geolocation, $log, $scope, leafletData, $state, $stateParams) {
+angular.module('citizen-engagement').controller('MapCtrl', function(MapService, IssueService, geolocation, $scope, leafletData, mapboxSecret,$state, $stateParams) {
   var mapCtrl = this;
 
   if($stateParams.filters != null){
@@ -36,7 +36,16 @@ angular.module('citizen-engagement').controller('MapCtrl', function(MapService, 
     mapCtrl.center.lng = longitude;
   });
 
-  mapCtrl.defaults = {};
+  //create the map
+  var mapboxMapId = 'mapbox.streets';  // define mapbox tileset
+  // Build the tile layer URL
+  var mapboxTileLayerUrl = 'http://api.tiles.mapbox.com/v4/' + mapboxMapId;
+  mapboxTileLayerUrl = mapboxTileLayerUrl + '/{z}/{x}/{y}.png';
+  mapboxTileLayerUrl = mapboxTileLayerUrl + '?access_token=' + mapboxSecret;
+
+  mapCtrl.defaults = {
+      tileLayer: mapboxTileLayerUrl
+    };
   mapCtrl.markers = [];
   mapCtrl.center = {
     lat: 51.48,
@@ -52,6 +61,8 @@ angular.module('citizen-engagement').controller('MapCtrl', function(MapService, 
       mapCtrl.center.lng = longitude;
     });
   }
+
+
 
   //Add issues marker on the map
   function createMarkers(issues) {
@@ -70,7 +81,7 @@ angular.module('citizen-engagement').controller('MapCtrl', function(MapService, 
 
   function loadMarkers() {
     leafletData.getMap().then(function(map) {
-      
+
       IssueService.getIssuesByLocation(map, stateFilters).then(function(issues){
         mapCtrl.markers = [];
         createMarkers(issues);
