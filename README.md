@@ -62,7 +62,7 @@ Il est également possible d'avoir une liste des issues. Pour chaque issue, il y
 ### Filtres
 Il est possible de filtrer la liste (ou la carte) avec l'option "Filtres" qui se situe en haut à droite de l'application
 
-<img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/FiltersOK.png" height="300">
+<img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/Filters.png" height="300">
 
 ### Issue details
 Si l'on clique sur un issue (sur le repère sur la carte ou sur l'issue dans la liste), cela mène aux détails de l'issue.
