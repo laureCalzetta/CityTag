@@ -12,33 +12,36 @@ L'application propose d'avoir la liste des issues sous deux formes, soit sous fo
 
 * [Login](#login)
   * Se connecter
-  * Creation du compte
+  * Creation d'un compte
 
 * [Issues](#issues)
   * Issues Map
   * Issues List
   * Filtres
   * Issue détails
+    * Commentaires
 
 * [Ajout d'issues](#ajoutIssue)
 
 * [Profile](#profile)
   * Informations
-  * Se deconnecter
+  * Se deconnecteR
 
 
 ## Login
 
+### Se connecter
 Lors de l'ouverture de l'application, la page de login va s'ouvrir.
 
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/User/Login.png" height="300">
 
 Il est nécessaire d'y entrer son nom d'utilisateur et son mot de passe. Si vous n'avez pas encore de compte, il est possible d'en créer un en cliquant sur "Create an account".
 
-
+### Creation d'un compte
 Vous allez être redirigé sur la page prévu pour. Il y sera demandé d'entrer un nom d'utilisateur, son prénom, son nom et de créer un mot de passe. Il est également possible d'y ajouter un numéro de téléphone (optionel).
 
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/User/CreateAnAccount.png" height="300">
+
 
 Lors de la connexion, l'application mène directement à la carte où sont positionnés les différents issues existants.
 
