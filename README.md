@@ -69,10 +69,10 @@ Si l'on clique sur un issue (sur le repère sur la carte ou sur l'issue dans la 
 
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueDetails.png" height="300">
 
+#### Commentaires 
 Il est possible de commenter les issues et de voir la liste des commentaires déjà effectués. Pour ce faire, il faut écrire son commentaire dans le champs prévu à cette effet et appuyer sur l'icone se trouvant sur la droite.
 
 <img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/Comment.png" height="300">
-
 
 ## Ajout d'issues
 Il est possible d'ajouter une issue depuis la "Issue Map" et la "Issue List". Pour ce faire, il suffit de cliquer sur le bouton "+" qui se trouve en bah à droite, au-desssus du menu.
