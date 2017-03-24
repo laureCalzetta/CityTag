@@ -65,7 +65,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
       views: {
         // The "tab-profile" view corresponds to the <ion-nav-view name="tab-profile"> directive used in the tabs.html template.
         'tab-profile': {
-          // This defines the template that will be inserted into the directive.
+          controller: 'ProfileCtrl',
+          controllerAs: 'profileCtrl',
           templateUrl: 'templates/profile.html'
         }
       }

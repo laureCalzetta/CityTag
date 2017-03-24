@@ -91,7 +91,6 @@ angular.module('citizen-engagement').controller('MapCtrl', function(MapService, 
 
   //Redirect to issueDetails when click event on a marker
   $scope.$on('leafletDirectiveMarker.click', function(event, marker) {
-    console.log(marker.model.issue);
     $state.go('issueDetails', {issueId: marker.model.issue.id});
   });
 });

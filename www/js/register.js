@@ -1,5 +1,10 @@
 angular.module('citizen-engagement').controller('RegisterCtrl', function(apiUrl, AuthService, $http, $ionicHistory, $ionicLoading, $scope, $state) {
     var registerCtrl = this;
+
+    registerCtrl.goBack = function (){
+      $ionicHistory.goBack();
+    };
+
     registerCtrl.user = {
       roles: ["citizen"]
     };

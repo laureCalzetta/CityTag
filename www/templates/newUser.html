@@ -1,20 +1,12 @@
-<!-- Register a new user example:
-{
-  "name": "jdoe",
-  "password": "changeme",
-  "firstname": "John",
-  "lastname": "Doe",
-  "phone": "(460) 614-2120",
-  "roles": [
-    "citizen"
-  ]
-} -->
-
 <ion-view>
 
 	<ion-nav-title>
 		<span class="navTitle">Create an account</span>
 	</ion-nav-title>
+
+	<ion-nav-buttons side="left">
+		<button type="button" ng-click="registerCtrl.goBack()" class="ion-ios-arrow-left button-icon iconeTop"></button>
+	</ion-nav-buttons>
 
   <ion-content>
 
