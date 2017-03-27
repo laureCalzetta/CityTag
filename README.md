@@ -53,7 +53,7 @@ Le menu se divise en trois parties :
 ## Issues
 
 ### Issue Map
-Les différentes issues sont représentées par des tags sur la carte (à l'endroit où elles se trouvent).
+Les différentes issues sont représentées par des markers sur la carte (à l'endroit où elles se trouvent). Pour accéder au détail d'une issue, il suffit de cliquer sur son marker.
 
 <p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/MapList.png" height="300"/></p>
 
@@ -68,7 +68,7 @@ Il est possible de filtrer la liste (ou la carte) avec l'option "Filtres" qui se
 <p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/Filters.png" height="300"/></p>
 
 ### Issue détails
-Si l'on clique sur un issue (sur le repère sur la carte ou sur l'issue dans la liste), cela mène aux détails de l'issue.
+Si l'on clique sur un issue (sur le marker sur la carte ou sur l'issue dans la liste), cela mène aux détails de l'issue.
 
 <p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/IssueDetails.png" height="300"/></p>
 
