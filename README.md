@@ -21,7 +21,7 @@ L'application propose d'avoir la liste des issues sous deux formes, soit sous fo
   * Issue détails
     * Commentaires
 
-* [Ajout d'issue](#ajoutIssue)
+* [Ajout d'issue](#ajout-dissue)
 
 * [Profile](#profile)
   * Informations
