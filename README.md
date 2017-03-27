@@ -82,7 +82,7 @@ Il est possible d'ajouter une issue depuis la "Issue Map" et la "Issue List". Po
 
 Ainsi l'application redirige vers la fenêtre d'ajout. Pour ajouter une issue, il est possible de prendre une photo (avec l'appareil photo du téléphone). Il est indispensable d'y ajouter un ou des tags. Une description peut être ajouté (optionnel).
 
-<p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/AddIssue.png" height="300"/></p>
+<p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/NewIssue.png" height="300"/></p>
 
 ## Profile
 Dans cette partie, il est possible de voir ses informations personnel mais surtout de pouvoir se déconnecter en cliquant sur le bouton se trouvant en haut à droite.
