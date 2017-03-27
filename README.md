@@ -77,7 +77,7 @@ Il est possible de commenter les issues et de voir la liste des commentaires dé
 
 <p align="center"><img src="https://github.com/laureCalzetta/CityTag/blob/master/img/Issue/Comment.png" height="300"/></p>
 
-## Ajout d'issues
+## Ajout d'issue
 Il est possible d'ajouter une issue depuis la "Issue Map" et la "Issue List". Pour ce faire, il suffit de cliquer sur le bouton "+" qui se trouve en bas à droite, au-dessus du menu.
 
 Ainsi l'application redirige vers la fenêtre d'ajout. Pour ajouter une issue, il est possible de prendre une photo (avec l'appareil photo du téléphone). Il est indispensable d'y ajouter un ou des tags. Une description peut être ajouté (optionnel).
