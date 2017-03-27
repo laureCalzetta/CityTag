@@ -138,8 +138,8 @@ angular.module('citizen-engagement').config(function($stateProvider, $urlRouterP
 
     .state('addIssue', {
       url: '/addIssue',
-      controller: 'IssueCtrl',
-      controllerAs: 'issueCtrl',
+      controller: 'CreateIssueCtrl',
+      controllerAs: 'createIssueCtrl',
       templateUrl: 'templates/addIssue.html'
     })
 

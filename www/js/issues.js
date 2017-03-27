@@ -166,6 +166,43 @@ angular.module('citizen-engagement').factory('IssueService', function($http, api
     });
 
   }
+  service.getIssueTypes = function(){
+    return $http({
+      method: 'GET',
+      url: apiUrl + '/issueTypes'
+    }).then(function(res){
+      return res.data;
+
+    });
+  }
+
+
+  service.createIssue = function(description, imageUrl, href, tags, x, y){
+    return $http({
+      method: 'POST',
+      url: apiUrl+'/issues',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        "description": description,
+        "tags": tags,
+        "imageUrl": imageUrl,
+        "location": {
+          "coordinates": [
+            y,
+            x
+          ],
+          "type": "Point"
+        },
+        "issueTypeHref": href
+
+      }
+    }).then(function(res){
+      return res.data;
+
+    });
+  }
 
   return service;
 

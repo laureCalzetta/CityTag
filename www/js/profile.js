@@ -19,11 +19,17 @@ angular.module('citizen-engagement').factory('ProfileService', function($http, a
 
 });
 
-angular.module('citizen-engagement').controller('ProfileCtrl', function(ProfileService) {
+angular.module('citizen-engagement').controller('ProfileCtrl', function(ProfileService, $scope) {
   var profileCtrl = this;
 
-  ProfileService.getCurrentUser().then(function(user){
-    profileCtrl.user = user;
+  $scope.$on('$ionicView.beforeEnter', function() {
+    profileCtrl.user = {};
+    ProfileService.getCurrentUser().then(function(user){
+      profileCtrl.user = user;
+    });
   });
+
+
+
 
 });
